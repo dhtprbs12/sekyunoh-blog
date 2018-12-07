@@ -1,0 +1,129 @@
+doctype html
+html
+  head
+    title Welcome to Sekyun Oh's Blog
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    <!--animsition-->
+    link(rel='stylesheet', href='/animsition.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='/animsition.min.js')
+    script.
+      $(document).ready(function() {
+      // animsition
+      $(".image").animsition({
+      linkElement: '.animsition-link',
+      loading: true,
+      loadingParentElement: 'body',
+      loadingClass: 'animsition-loading',
+      loadingInner: '', // e.g '<img src="loading.svg" />'
+      timeout: false,
+      timeoutCountdown: 5000,
+      onLoadEvent: true,
+      browser: [ 'animation-duration', '-webkit-animation-duration'],
+      overlay : false,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body',
+      transition: function(url){ window.location.href = url; }
+      });
+      });
+  style.cp-pen-styles.
+    body, html {
+    height: 100%;
+    }
+    .image {
+    background-color: black;
+    //background: //url(https://sonorangirl.github.io/Earth-Quotes/img/google-earth-view-South-Iceland3.jpg)no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    margin-top: -20px;
+    }
+    .image .heading {
+    color: white;
+    text-align: center;
+    padding-top: 300px;
+    }
+    .image p {
+    text-align: center;
+    padding: 20px 60px;
+    }
+    .image p .btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1.2em;
+    }
+    img{
+    width: 50px;
+    height: 50px;
+    }
+    .image p .btn:hover {
+    color: gray;
+    border-color: gray;
+    }
+    .navbar {
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+    }
+    .navbar-default .navbar-brand {
+    margin-top: 10px;
+    color: white;
+    }
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    margin: 10px 5px 5px 5px;
+    }
+    //사이즈 줄였을때 보이는 collapsible button border 컬러 설정
+    .navbar-default .navbar-toggle {
+    border-color: white;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+    color: white;
+    background-color: white;
+    }
+
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.animsition-link(href='/', data-animsition-out-class='zoom-out-sm', data-animsition-out-duration='800') Sekyun Oh
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.animsition-link(href='/about', data-animsition-out-class='fade-out-down', data-animsition-out-duration='800') About
+            li
+              a.animsition-link(href='/experience', data-animsition-out-class='fade-out-left-lg', data-animsition-out-duration='800') Experience
+            li
+              a.animsition-link(href='/projects') Projects
+            li
+              a.animsition-link(href='/contact', data-animsition-out-class='rotate-out-sm', data-animsition-out-duration='800') Contact
+        // /.nav-collapse
+
+    .image.animsition(data-animsition-in-class='fade-in-down', data-animsition-in-duration='800')
+
+      h1.heading S e k y u n O h
+      p
+        a(href='https://www.facebook.com/solkiim', target='_blank')
+          img(src='/f.png')
+      p
+        a(href='https://www.facebook.com/solkiim', target='_blank')
+          img(src='/in.png')
+      p
+        a(href='https://www.facebook.com/solkiim', target='_blank')
+          img(src='/email.png')

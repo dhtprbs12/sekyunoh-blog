@@ -1,0 +1,216 @@
+doctype html
+html
+  head
+    title Welcome to Sekyun Oh's Blog
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    <!--slick for slide-->
+    link(rel='stylesheet', href='/slick.css')
+    link(rel='stylesheet', href='/slick-theme.css')
+
+    style.
+      * {
+      box-sizing: border-box;
+      }
+      body {
+      background-color:black;
+      margin: 0;
+      font-family: Arial;
+      }
+
+      .navbar {
+      height: 80px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      z-index: 100;
+      transition: background-color 1s ease 0s;
+      }
+      .navbar-default .navbar-brand {
+      margin-top: 10px;
+      color: white;
+      }
+      .navbar-default .navbar-nav > li > a {
+      color: white;
+      margin: 10px 5px 5px 5px;
+      }
+      //사이즈 줄였을때 보이는 collapsible button border 컬러 설정
+      .navbar-default .navbar-toggle {
+      border-color: white;
+      }
+
+      .navbar-default .navbar-toggle .icon-bar {
+      color: white;
+      background-color: white;
+      }
+
+      /* The grid: Four equal columns that floats next to each other */
+      .column {
+      float: left;
+      width: 25%;
+      padding: 10px;
+      }
+      /* Style the images inside the grid */
+      .column img {
+      opacity: 0.8;
+      height:150px;
+      cursor: pointer;
+      }
+      .column img:hover {
+      opacity: 1;
+      }
+
+      .row {
+      margin: 0 auto;
+      padding: 15px;
+      width: 90%;
+      }
+
+      .slick-slide {
+      background: $c1;
+      color: white;
+      padding: 40px 0;
+      }
+
+
+      /* The expanding image container */
+      .container {
+      position: relative;
+      }
+
+      .image_container{
+      border-style: solid;
+      border-width: 5px;
+      border-color:white;
+      position: absolute; margin: auto; top: 120px; right: 0; bottom: 0; left:0; width:800px; height:400px;
+      }
+
+
+      .bottom-center{
+      background-color:black;
+
+      }
+
+
+
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.animsition-link(href='/', data-animsition-out-class='zoom-out-sm', data-animsition-out-duration='800') Sekyun Oh
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.animsition-link(href='/about', data-animsition-out-class='fade-out-down', data-animsition-out-duration='800') About
+            li
+              a.animsition-link(href='/experience', data-animsition-out-class='fade-out-left-lg', data-animsition-out-duration='800') Experience
+            li
+              a.animsition-link(href='/projects',data-animsition-in-class='fade-out-right-lg', data-animsition-in-duration='800') Projects
+            li
+              a.animsition-link(href='/contact', data-animsition-out-class='rotate-out-sm', data-animsition-out-duration='800') Contact
+
+      //video(width='400', controls='')
+        //source(src='/you-niversity.mov', type='video/mp4')
+    .image_container
+      img#expandedImg(class='image-voca', src='/image-voca.png' style='width:100%; height:70%;')
+      .bottom-center(style='width:100%; height:20%;')
+        .bottom-center-left(style='width:90%; height:100%; float:left')
+          a#website(href='http://www.imagevoca.com/' target="_blank" style='color:white')
+            h3 &nbsp☛ Image Voca
+          p#description(style='color:white')&nbsp&nbspan educational app that people can memorize vocabulary as visualizing its illustration
+          a#github(href='/' style='color:white')
+            b &nbsp&nbspGitHub
+        .bottom-center-right(style='width:10%; height:100%; float:right; text-align:right;')
+          b#language(style='color:white')
+            | html&nbsp
+            br
+            | css&nbsp
+            br
+            | js&nbsp
+            br
+            | bootstrap&nbsp
+            br
+            | 2016&nbsp
+    // The columns
+    .row
+      .column
+        img(class='image-voca', src='/image-voca.png', alt='&nbsp☛ Image Voca', style='width:100%', onclick='myFunction(this);')
+      .column
+        img(class='image-speaking', src='/image-speaking.png', alt='&nbsp☛ Image Speaking', style='width:100%', onclick='myFunction(this);')
+      .column
+        img(class='youniversity', src='/youniversity.png', alt='&nbsp☛ You-niversity', style='width:100%', onclick='myFunction(this);')
+      .column
+        img(class='sekyunoh-blog', src='/sekyunoh-blog.png', alt='&nbsp☛ Sekyunoh-Blog', style='width:100%', onclick='myFunction(this);')
+      .column
+        img(class='csuofa', src='/csuofa.png', alt='&nbsp☛ CSUofA', style='width:100%', onclick='myFunction(this);')
+
+    script(type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(type="text/javascript" src='/slick.min.js')
+
+    script.
+      $(document).ready(function() {
+      $('.row').slick({
+      centerMode: true,
+      slidesToShow: 4,
+      arrow: true
+      });
+      });
+
+    script.
+      function myFunction(imgs) {
+      var className = imgs.getAttribute('class');
+      var expandImg = document.getElementById("expandedImg");
+      var website = document.getElementById("website");
+      var description = document.getElementById("description");
+      var lang = document.getElementById("language");
+      var github = document.getElementById("github");
+
+      expandImg.src = imgs.src;
+      website.innerHTML = '<h3>'+imgs.alt+'</h3>';
+      expandImg.parentElement.style.display = "block";
+
+      if(className == 'image-voca'){
+
+        website.href = 'http://www.imagevoca.com/'
+        description.innerHTML = '&nbsp&nbspan educational app that people can memorize vocabulary as visualizing its illustration'
+        lang.innerHTML = '<b id="language" style="color:white;">'+'swift&nbsp'+'<br />'+'objective-c&nbsp'+'<br />'+'nodejs&nbsp'+'<br />'+'mysql&nbsp'+'<br />'+'2016&nbsp'+'</b>'
+        github.style.display = 'block'
+
+      }else if(className == 'image-speaking'){
+
+        website.href = 'https://appadvice.com/app/ec-9d-b4-eb-af-b8-ec-a7-80-ec-8a-a4-ed-94-bc-ed-82-b9/1179745914'
+        description.innerHTML = '&nbsp&nbspan innovative tool that provides environment where people can practice english as they speak real sentence'
+        lang.innerHTML = '<b id="language" style="color:white;">'+'swift&nbsp'+'<br />'+'objective-c&nbsp'+'<br />'+'nodejs&nbsp'+'<br />'+'mysql&nbsp'+'<br />'+'2016&nbsp'+'</b>'
+        github.style.display = 'block'
+
+      }else if(className == 'youniversity'){
+
+        website.href = 'https://itunes.apple.com/us/app/you-niversity/id1431096914?mt=8'
+        description.innerHTML = '&nbsp&nbspthe service that helps people look for various universities in States and find an university in advance'
+        lang.innerHTML = '<b id="language" style="color:white;">'+'swift&nbsp'+'<br />'+'objective-c&nbsp'+'<br />'+'nodejs&nbsp'+'<br />'+'mysql&nbsp'+'<br />'+'aws&nbsp'+'<br />'+'2018&nbsp'+'</b>'
+        github.style.display = 'block'
+
+      }else if(className == 'sekyunoh-blog'){
+
+        website.href = 'localhost:3000/'
+        description.innerHTML = '&nbsp&nbspa personal website to introduce myself using skills that I have had. Hope you enjoy it!'
+        lang.innerHTML = '<b id="language" style="color:white;">'+'jquery&nbsp'+'<br />'+'js&nbsp'+'<br />'+'nodejs&nbsp'+'<br />'+'bootstrap&nbsp'+'<br />'+'aws&nbsp'+'<br />'+'2018&nbsp'+'</b>'
+        github.style.display = 'block'
+
+      }else{
+
+        //csufoa
+        website.href = 'https://www.cs.arizona.edu/'
+        description.innerHTML = '&nbsp&nbspthe university that I am attending. a fantastic association. please, look around how good it is!'
+        lang.innerHTML = ''
+        github.style.display = 'none'
+      }
+      }

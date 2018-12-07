@@ -1,0 +1,258 @@
+doctype html
+html
+  head
+    title Welcome to Sekyun Oh's Blog
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    <!--animsition-->
+    link(rel='stylesheet', href='/animsition.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='/animsition.min.js')
+    script(src='/typed.min.js')
+
+    script.
+      $(document).ready(function() {
+      // animsition
+      $(".image").animsition({
+      linkElement: '.animsition-link',
+      loading: true,
+      loadingParentElement: 'body',
+      loadingClass: 'animsition-loading',
+      loadingInner: '', // e.g '<img src="loading.svg" />'
+      timeout: false,
+      timeoutCountdown: 5000,
+      onLoadEvent: true,
+      browser: [ 'animation-duration', '-webkit-animation-duration'],
+      overlay : false,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body',
+      transition: function(url){ window.location.href = url; }
+      });
+      var typed = new Typed('.sentence', {
+      strings: ["Live as if you were to die tomorrow. <br> Learn as if you were to live forever. <br> - Mahatma Gandhi"],
+      typeSpeed: 30,
+      loop:true
+      });
+      });
+
+
+  style.cp-pen-styles.
+    body, html {
+    height: 100%;
+    }
+    .image {
+    background-color: black;
+    //background: //url(https://sonorangirl.github.io/Earth-Quotes/img/google-earth-view-South-Iceland3.jpg)no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    //margin-top: -20px;
+    }
+    .image .heading {
+    color: white;
+    text-align: center;
+    padding-top: 300px;
+    }
+
+    img{
+    width: 50px;
+    height: 50px;
+    }
+    .image p .btn:hover {
+    color: gray;
+    border-color: gray;
+    }
+    .navbar {
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+    }
+    .navbar-default .navbar-brand {
+    margin-top: 10px;
+    color: white;
+    }
+    .navbar-default .navbar-nav > li > a {
+    color: white;
+    margin: 10px 5px 5px 5px;
+    }
+    //사이즈 줄였을때 보이는 collapsible button border 컬러 설정
+    .navbar-default .navbar-toggle {
+    border-color: white;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+    color: white;
+    background-color: white;
+    }
+
+    .experiences{
+    padding-top:100px;
+    padding-left:100px;
+    width:500px;
+    height:400px;
+    }
+
+    .image h1, li{
+    color:white;
+    }
+
+    li:hover{
+    color:gray;
+    }
+
+    .tools{
+    //float:right;
+    padding-left:100px;
+    width:500px;
+    height:100px;
+    }
+
+    .resume {
+    padding-left:100px;
+    }
+    .left{
+    float:left;
+    width:40%;
+    overflow:hidden;
+    }
+    .right{
+    float:left;
+    width:60%;
+    overflow:hidden;
+    }
+    //.lesson{
+    //padding-top:300px;
+    //padding-right:100px;
+    //}
+    .ml12 {
+    font-weight: 200;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    }
+
+    .ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+    float: left;
+    width: 33.33%;
+    //padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    border: 3px solid white;
+    }
+
+    .box{
+    width:100%;
+    height:100%;
+    }
+    .top{
+    padding-top:50px;
+    text-align: center;
+    height:30%;
+    }
+
+    .bottom{
+    margin: auto;
+    width: 80%;
+    height:65%;
+    border: 3px solid white;
+    }
+
+    /* Clear floats after the columns */
+    .bottom:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+    width: 100%;
+    }
+    }
+
+    .resume-content{
+    position: relative;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    }
+    h1{
+    text-align:center;
+    }
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.animsition-link(href='/', data-animsition-out-class='zoom-out-sm', data-animsition-out-duration='800') Sekyun Oh
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.animsition-link(href='/about', data-animsition-out-class='fade-out-down', data-animsition-out-duration='800') About
+            li
+              a.animsition-link(href='/experience', data-animsition-out-class='fade-out-left-lg', data-animsition-out-duration='800') Experience
+            li
+              a.animsition-link(href='/projects',data-animsition-in-class='fade-out-right-lg', data-animsition-in-duration='800') Projects
+            li
+              a.animsition-link(href='/contact', data-animsition-out-class='fade-out-left-lg', data-animsition-out-duration='800') Contact
+        // /.nav-collapse
+    .image.animsition(data-animsition-in-class='rotate-in-sm', data-animsition-in-duration='1000')
+      .box
+        .top
+          .lesson
+            h1.sentence
+        .bottom
+          .column(style="background-color:black;")
+            .content
+              h1 Experience
+              br
+              ul
+                li
+                  span Tech Savvy Mobile
+                  br
+                  |  &nbsp&nbspsoftware engineer intern / 2016 - 2017
+                li
+                  span R.O.K.A.F
+                  br
+                  |  &nbsp&nbspmilitary police / 2014 - 2016
+                li
+                  span You-niversity
+                  br
+                  |  &nbsp&nbspmobile software engineering / 2018
+                  br
+                  |  &nbsp&nbspdatabase manager / 2018
+                li
+                  span Sekyun Oh's Blog
+                  br
+                  |  &nbsp&nbspweb developer / 2018 - present
+                li
+                  span The University Of Arizona
+                  br
+                  |  &nbsp&nbspa very passionate student / 2014 - Present
+          .column(style="background-color:black;")
+            .resume-content
+              a(href='/resume.pdf', target='_blank')
+                h1 Resume here
+          .column(style="background-color:black;")
+            .content
+              h1 Tools
+              br
+              ul
+                li JAVA, C, SQL, Assembly, Swift, AWS
+                li HTML, CSS, JavaScript, JQuery, Bootstrap, Node.js
