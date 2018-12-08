@@ -126,7 +126,7 @@ html
           a#website(href='http://www.imagevoca.com/' target="_blank" style='color:white')
             h3 &nbsp☛ Image Voca
           p#description(style='color:white')&nbsp&nbspan educational app that people can memorize vocabulary as visualizing its illustration
-          a#github(href='/' style='color:white')
+          a#github(href='' style='color:white; display:none' target='_blank')
             b &nbsp&nbspGitHub
         .bottom-center-right(style='width:10%; height:100%; float:right; text-align:right;')
           b#language(style='color:white')
@@ -182,20 +182,21 @@ html
         website.href = 'http://www.imagevoca.com/'
         description.innerHTML = '&nbsp&nbspan educational app that people can memorize vocabulary as visualizing its illustration'
         lang.innerHTML = '<b id="language" style="color:white;">'+'swift&nbsp'+'<br />'+'objective-c&nbsp'+'<br />'+'nodejs&nbsp'+'<br />'+'mysql&nbsp'+'<br />'+'2016&nbsp'+'</b>'
-        github.style.display = 'block'
+        github.style.display = 'none'
 
       }else if(className == 'image-speaking'){
 
         website.href = 'https://appadvice.com/app/ec-9d-b4-eb-af-b8-ec-a7-80-ec-8a-a4-ed-94-bc-ed-82-b9/1179745914'
         description.innerHTML = '&nbsp&nbspan innovative tool that provides environment where people can practice english as they speak real sentence'
         lang.innerHTML = '<b id="language" style="color:white;">'+'swift&nbsp'+'<br />'+'objective-c&nbsp'+'<br />'+'nodejs&nbsp'+'<br />'+'mysql&nbsp'+'<br />'+'2016&nbsp'+'</b>'
-        github.style.display = 'block'
+        github.style.display = 'none'
 
       }else if(className == 'youniversity'){
 
         website.href = 'https://itunes.apple.com/us/app/you-niversity/id1431096914?mt=8'
         description.innerHTML = '&nbsp&nbspthe service that helps people look for various universities in States and find an university in advance'
         lang.innerHTML = '<b id="language" style="color:white;">'+'swift&nbsp'+'<br />'+'objective-c&nbsp'+'<br />'+'nodejs&nbsp'+'<br />'+'mysql&nbsp'+'<br />'+'aws&nbsp'+'<br />'+'2018&nbsp'+'</b>'
+        github.href = 'https://github.com/dhtprbs12/you-niversity'
         github.style.display = 'block'
 
       }else if(className == 'sekyunoh-blog'){
@@ -203,6 +204,7 @@ html
         website.href = 'localhost:3000/'
         description.innerHTML = '&nbsp&nbspa personal website to introduce myself using skills that I have had. Hope you enjoy it!'
         lang.innerHTML = '<b id="language" style="color:white;">'+'jquery&nbsp'+'<br />'+'js&nbsp'+'<br />'+'nodejs&nbsp'+'<br />'+'bootstrap&nbsp'+'<br />'+'aws&nbsp'+'<br />'+'2018&nbsp'+'</b>'
+        github.href = 'https://github.com/dhtprbs12/sekyunoh-blog'
         github.style.display = 'block'
 
       }else{
