@@ -3,7 +3,7 @@ html
   head
     title Welcome to Sekyun Oh's Blog
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
@@ -30,16 +30,14 @@ html
       transition: function(url){ window.location.href = url; }
       });
       });
-  style.cp-pen-styles.
+  style.cp-pen-style.
     body, html {
     height: 100%;
     }
     .image {
     background-color: black;
-    //background: //url(https://sonorangirl.github.io/Earth-Quotes/img/google-earth-view-South-Iceland3.jpg)no-repeat center center;
     background-size: cover;
     height: 100%;
-    //margin-top: -20px;
     }
     .image .heading {
     color: white;
@@ -48,7 +46,7 @@ html
     }
     .image p {
     text-align: center;
-    padding: 20px 60px;
+    padding: 20px;
     }
     .image p .btn {
     background-color: transparent;
@@ -83,7 +81,7 @@ html
     color: white;
     margin: 10px 5px 5px 5px;
     }
-    //사이즈 줄였을때 보이는 collapsible button border 컬러 설정
+    /*set color of collapsible button border when screen shrinked*/
     .navbar-default .navbar-toggle {
     border-color: white;
     }
@@ -107,7 +105,7 @@ html
     .carousel-inner > .item > img,
     .carousel-inner > .item > a > img {
     width: 70%;
-    height: 500px;
+    height: 400px;
     margin: auto;
     }
 
@@ -133,6 +131,29 @@ html
     .description > hr{
     color:white;
     border-width: 3px;
+    }
+ 
+    /*responsive web*/
+    @media screen and (max-width:900px){
+    /*body color*/
+    body{
+    background-color:black;
+    }
+    /*.description goes to bottom of carousel*/
+    .description{
+    position:relative;
+    display:block;
+    width:100%;
+    left:0px;
+    top:10px;
+    }
+    .description > hr {
+    display:none;
+    }
+    .carousel-inner > .item > img {
+    width:50%;
+    /*margin:0;this can set carousel to the left but not text in it*/
+    }
     }
 
 
@@ -194,9 +215,6 @@ html
           | My name is Sekyun Oh majoring in computer science at University of Arizona.
           br
           | check out the &nbsp
-          a(href='experience.html') things i’ve done
-          | , the &nbsp
-          a(href='projects.html') projects i’ve built
+          a(href='/experience') things i’ve done
           | , and the &nbsp
-          a(href='http://sol.kim/', target='_blank') places i’ve been
-          | !
+          a(href='/projects') projects i’ve built.
